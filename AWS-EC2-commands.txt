@@ -1,0 +1,20 @@
+//root user
+  $ sudo su
+//set password to access the server using ssh 
+  $ passwd ec2-user
+//set password authentication to yes
+  $ vi /etc/ssh/sshd_config 
+      passwordAuthentication yes
+//reload ssh service
+  $ systemctl reload sshd.service
+  $ systemctl status sshd.service
+
+//install docker
+  $ yum install docker
+//check the user groups
+  $ cat /etc/group
+//add ec2-user in docker group for access privileges 
+  $ usermod -aG docker ec2-user
+//start the docker service
+  $ systemctl start docker.service
+  $ systemctl status docker.service
