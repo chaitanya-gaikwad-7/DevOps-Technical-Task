@@ -1,0 +1,28 @@
+Source Code Management:
+  Git:
+    Git repository:
+      https://github.com/chaitanya-gaikwad-7/DevOps-Technical-Task.git
+    Branch Specifier:
+      */main
+Build :
+  Send files or execute commands over ssh:
+    ssh server:
+      Docker-tomcat-server
+    Transfer set:
+      Source Files:
+        myApp/*, Dockerfile
+      Exec command:
+        docker stop tomcat-container || true
+        docker rm tomcat-container || true
+        docker rmi custom-tomcat || true
+        docker build -t custom-tomcat .
+        docker run -d -p 8080:8080 --name=tomcat-container custom-tomcat
+----------------------------------------------------------------------------------
+Plugin Manager : Publish Over SSH (Version1.24)
+      ssh server:
+        Docker-tomcat-server
+      Hostname:
+        AWS EC2 public IP
+      Username:
+        ec2-user
+----------------------------------------------------------------------------------
