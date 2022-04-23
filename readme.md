@@ -9,5 +9,4 @@ Deploy simple web application on to the AWS ec2 instance under ALB via Jenkins.
 2. tomcat server
 3. docker
 4. jenkins
-5. AWS EC2 instances
-6. AWS Load Balancer + target groups
+5. AWS: EC2 instances + security groups + Load Balancer + target groups
